@@ -1,5 +1,6 @@
 #pragma once
 #include <iostream>
+
 enum signType { plus, minus };
 
 class currency
