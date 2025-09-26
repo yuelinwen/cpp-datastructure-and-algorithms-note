@@ -18,5 +18,13 @@
     <ClCompile Include="cpp-datastructure-and-algorithms-note.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="currency.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="currency.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
