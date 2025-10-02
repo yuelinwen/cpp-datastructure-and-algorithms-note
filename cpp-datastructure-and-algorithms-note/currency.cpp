@@ -35,3 +35,7 @@ void currency::output(std::ostream& out) const {
 }
 
 std::ostream& operator<<(std::ostream& out, const currency& x) { x.output(out); return out; }
+
+
+
+

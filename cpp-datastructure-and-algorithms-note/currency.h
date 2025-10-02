@@ -1,4 +1,4 @@
-#pragma once
+﻿#pragma once
 #include <iostream>
 
 enum signType { plus, minus };
@@ -30,6 +30,9 @@ public:
 	};
 	currency operator+(const currency&) const;
 	currency& operator+=(const currency& x) { amount += x.amount; return *this; };
-	void output(std::ostream&) const;
+	void output(std::ostream&) const;  // “辅助打印函数”，封装了“对象如何打印”的逻辑
+	// 	1.	output 是类的成员函数，可以直接访问私有数据。
+	// 2.	operator<< 保持简洁，只负责和 C++ 标准流接口对接。
+	// 3.	避免把所有打印逻辑都写进 operator<<，提高代码可维护性。
 };
 
