@@ -24,18 +24,27 @@ currency currency::operator+(const currency& x)const {
 	return result;
 }
 
-void currency::output(std::ostream& out) const {
-	long theAmount = amount;
-	if (theAmount < 0) { out << '-'; theAmount = -theAmount; }
-	long dollars = theAmount / 100;
-	out << '$' << dollars << '.';
-	int cents = theAmount - dollars * 100;
+// “辅助打印函数”，封装了“对象如何打印”的逻辑，但是可以Friend function来代替
+//void currency::output(std::ostream& out) const {
+//	long theAmount = amount;
+//	if (theAmount < 0) { out << '-'; theAmount = -theAmount; }
+//	long dollars = theAmount / 100;
+//	out << '$' << dollars << '.';
+//	int cents = theAmount - dollars * 100;
+//	if (cents < 10) out << '0';
+//	out << cents;
+//}
+
+std::ostream& operator<<(std::ostream& out, const currency& x) {
+	if (x.getSign() == minus) out << '-';
+	out << '$' << x.getDollars() << '.';
+	unsigned int cents = x.getCents();
 	if (cents < 10) out << '0';
 	out << cents;
+	return out;
 }
-
-std::ostream& operator<<(std::ostream& out, const currency& x) { x.output(out); return out; }
-
-
+// 为什么要把 operator<< 定义成类外的非成员函数？
+// 1. 必须是非成员函数：因为 cout 在左边。
+// 2. 写成 Friend 的原因：为了让这个非成员函数能读取 private 数据。
 
 

@@ -2,10 +2,16 @@
 //
 
 #include <iostream>
+#include "ch1/currency.h"
 
 int main()
 {
     std::cout << "Hello World!\n";
+
+    //ch1
+    currency h(plus, 3, 50);
+	std::cout << "h = " << h << std::endl;
+
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu

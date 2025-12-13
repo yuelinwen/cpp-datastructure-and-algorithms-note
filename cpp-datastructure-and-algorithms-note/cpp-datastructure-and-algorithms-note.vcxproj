@@ -177,10 +177,10 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="cpp-datastructure-and-algorithms-note.cpp" />
-    <ClCompile Include="currency.cpp" />
+    <ClCompile Include="ch1\currency.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="currency.h" />
+    <ClInclude Include="ch1\currency.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
