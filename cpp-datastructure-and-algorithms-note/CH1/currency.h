@@ -1,4 +1,6 @@
-﻿#pragma once
+﻿#ifndef currency_H
+#define currency_H
+
 #include <iostream>
 
 enum signType { plus, minus };
@@ -37,3 +39,5 @@ public:
 };
 
 std::ostream& operator<<(std::ostream&, const currency&);
+
+#endif

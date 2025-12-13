@@ -128,11 +128,17 @@ void func(const int& a);
 int getValue() const;
 保护的是 调用该函数的对象本身，保证函数不会修改成员变量（除非是 mutable）。
 
+递归函数
 c++ recurisve 递归组成
 基础部分base component
 递归部分 recurisve component
 
-STL c++标准模版，由一个容器，适配器，迭代器，伪函数和算法 组成 
+分为直接递归和间接递归
+直接递归是直接自己嗲用自己
+简介递归是f 调用 g， g 调用 h, h 调用 f
+
+
+STL c++标准模版，由一个"容器，适配器，迭代器，伪函数和算法" 组成 
 
 
 
